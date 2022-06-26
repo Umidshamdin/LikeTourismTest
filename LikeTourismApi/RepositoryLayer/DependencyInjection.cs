@@ -18,6 +18,8 @@ namespace RepositoryLayer
             services.AddScoped<IRoomImagesRepository, RoomImagesRepository>();
             services.AddScoped<IHotelListImagesRepository, HotelListImagesRepository>();
             services.AddScoped<IHotelDescriptionRepository, HotelDescriptionRepository>();
+            services.AddScoped<IOrderRepository, OrderRepository>();
+
 
 
 

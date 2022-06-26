@@ -7,7 +7,7 @@ using ServiceLayer.DTOs.HotelDescription;
 using ServiceLayer.DTOs.HotelList;
 using ServiceLayer.DTOs.HotelListImages;
 using ServiceLayer.DTOs.House;
-
+using ServiceLayer.DTOs.Order;
 using ServiceLayer.DTOs.Reservation;
 using ServiceLayer.DTOs.RoomImages;
 using ServiceLayer.DTOs.Slider;
@@ -28,6 +28,10 @@ namespace ServiceLayer.Mapping
             CreateMap<HotelListImages, HotelListImagesDto>().ReverseMap();
             CreateMap<HotelDescription, HotelDescriptionDto>().ReverseMap();
             CreateMap<AppUser, RegisterDto>().ReverseMap();
+            CreateMap<Order, OrderDto>().ReverseMap();
+            CreateMap<UserDto, AppUser>().ReverseMap();
+
+
 
 
 

@@ -53,7 +53,14 @@ namespace Api.Controllers
         {
             return await _service.Login(loginDto);
         }
+        [HttpGet]
+        [Route("GetUserByEmail/{email}")]
+        public async Task<UserDto> GetUserByEmail([FromRoute] string email)
+        {
+            var user = await _service.GetUserByEmailAsync(email);
 
+            return user;
+        }
 
 
         //[HttpPost]

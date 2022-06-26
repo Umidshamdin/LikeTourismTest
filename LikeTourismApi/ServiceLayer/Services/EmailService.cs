@@ -58,5 +58,33 @@ namespace ServiceLayer.Services
             smtp.Send(message);
             smtp.Disconnect(true);
         }
+
+        public void OrderCreate(string email, string hotelname, string fullname, string phonenumber)
+        {
+
+            var message = new MimeMessage();
+
+            message.From.Add(new MailboxAddress("ITicket", "code.test.iticket@gmail.com"));
+
+            message.To.Add(new MailboxAddress("", email));
+
+            message.Subject = "Bizi Seçdiyiniz Üçün Təşəkkürlər";
+            string emailbody = string.Empty;
+            using (StreamReader streamReader = new StreamReader(Path.Combine(_env.WebRootPath, "Templates", "Order.html")))
+            {
+                emailbody = streamReader.ReadToEnd();
+            }
+
+
+            emailbody = emailbody.Replace("{{hotelname}}", $"{hotelname}").Replace("{{fullname}}", $"{fullname}").Replace("{{phonenumber}}", $"{phonenumber}");
+            message.Body = new TextPart(TextFormat.Html) { Text = emailbody };
+
+            using var smtp = new SmtpClient();
+            smtp.Connect("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+            smtp.Authenticate("code.test.iticket@gmail.com", "psutapkrmjbciuct");
+            smtp.Send(message);
+            smtp.Disconnect(true);
+
+        }
     }
 }

@@ -29,6 +29,8 @@ namespace ServiceLayer
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IOrderService, OrderService>();
+
 
 
 

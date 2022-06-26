@@ -10,8 +10,8 @@ using RepositoryLayer;
 namespace RepositoryLayer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220625135956_Tests")]
-    partial class Tests
+    [Migration("20220625145003_OrderHotel")]
+    partial class OrderHotel
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -99,7 +99,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 25, 17, 59, 55, 991, DateTimeKind.Local).AddTicks(7822));
+                        .HasDefaultValue(new DateTime(2022, 6, 25, 18, 50, 2, 545, DateTimeKind.Local).AddTicks(8261));
 
                     b.Property<byte[]>("Image")
                         .IsRequired()
@@ -129,7 +129,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 25, 17, 59, 55, 980, DateTimeKind.Local).AddTicks(8110));
+                        .HasDefaultValue(new DateTime(2022, 6, 25, 18, 50, 2, 524, DateTimeKind.Local).AddTicks(8205));
 
                     b.Property<byte[]>("Image")
                         .IsRequired()
@@ -176,7 +176,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 25, 17, 59, 55, 993, DateTimeKind.Local).AddTicks(5191));
+                        .HasDefaultValue(new DateTime(2022, 6, 25, 18, 50, 2, 549, DateTimeKind.Local).AddTicks(3233));
 
                     b.Property<int>("HotelListId")
                         .HasColumnType("int");
@@ -211,7 +211,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 25, 17, 59, 55, 985, DateTimeKind.Local).AddTicks(6487));
+                        .HasDefaultValue(new DateTime(2022, 6, 25, 18, 50, 2, 532, DateTimeKind.Local).AddTicks(5226));
 
                     b.Property<string>("Desc")
                         .HasMaxLength(300)
@@ -264,7 +264,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 25, 17, 59, 55, 992, DateTimeKind.Local).AddTicks(7366));
+                        .HasDefaultValue(new DateTime(2022, 6, 25, 18, 50, 2, 547, DateTimeKind.Local).AddTicks(9043));
 
                     b.Property<int>("HotelListId")
                         .HasColumnType("int");
@@ -295,7 +295,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 25, 17, 59, 55, 990, DateTimeKind.Local).AddTicks(7527));
+                        .HasDefaultValue(new DateTime(2022, 6, 25, 18, 50, 2, 543, DateTimeKind.Local).AddTicks(6599));
 
                     b.Property<int>("FamousCityId")
                         .HasColumnType("int");
@@ -330,6 +330,37 @@ namespace RepositoryLayer.Migrations
                     b.ToTable("House");
                 });
 
+            modelBuilder.Entity("DomainLayer.Entities.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("HotelListId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ReservationId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SoftDelete")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ReservationId");
+
+                    b.ToTable("Order");
+                });
+
             modelBuilder.Entity("DomainLayer.Entities.Reservation", b =>
                 {
                     b.Property<int>("Id")
@@ -340,7 +371,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 25, 17, 59, 55, 987, DateTimeKind.Local).AddTicks(8329));
+                        .HasDefaultValue(new DateTime(2022, 6, 25, 18, 50, 2, 536, DateTimeKind.Local).AddTicks(102));
 
                     b.Property<int>("HotelListId")
                         .HasColumnType("int");
@@ -381,7 +412,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 25, 17, 59, 55, 992, DateTimeKind.Local).AddTicks(2546));
+                        .HasDefaultValue(new DateTime(2022, 6, 25, 18, 50, 2, 546, DateTimeKind.Local).AddTicks(9048));
 
                     b.Property<byte[]>("Image")
                         .IsRequired()
@@ -412,7 +443,7 @@ namespace RepositoryLayer.Migrations
                     b.Property<DateTime>("CreateDate")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("datetime2")
-                        .HasDefaultValue(new DateTime(2022, 6, 25, 17, 59, 55, 987, DateTimeKind.Local).AddTicks(234));
+                        .HasDefaultValue(new DateTime(2022, 6, 25, 18, 50, 2, 534, DateTimeKind.Local).AddTicks(5348));
 
                     b.Property<string>("Desc")
                         .HasMaxLength(300)
@@ -610,6 +641,17 @@ namespace RepositoryLayer.Migrations
                         .IsRequired();
 
                     b.Navigation("FamousCity");
+                });
+
+            modelBuilder.Entity("DomainLayer.Entities.Order", b =>
+                {
+                    b.HasOne("DomainLayer.Entities.Reservation", "Reservation")
+                        .WithMany()
+                        .HasForeignKey("ReservationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Reservation");
                 });
 
             modelBuilder.Entity("DomainLayer.Entities.Reservation", b =>

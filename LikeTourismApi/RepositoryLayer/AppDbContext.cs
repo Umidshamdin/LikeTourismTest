@@ -22,6 +22,7 @@ namespace RepositoryLayer
             modelBuilder.ApplyConfiguration(new RoomImagesConfiguration());
             modelBuilder.ApplyConfiguration(new HotelListImagesConfiguration());
             modelBuilder.ApplyConfiguration(new HotelDescriptionConfiguration());
+            modelBuilder.ApplyConfiguration(new OrderConfigration());
 
 
 

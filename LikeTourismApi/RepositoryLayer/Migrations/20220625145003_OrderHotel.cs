@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
-using System;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RepositoryLayer.Migrations
 {
-    public partial class AddOrderTables : Migration
+    public partial class OrderHotel : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,203 +12,194 @@ namespace RepositoryLayer.Migrations
                 table: "Slider",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 89, DateTimeKind.Local).AddTicks(3923),
+                defaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 534, DateTimeKind.Local).AddTicks(5348),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 559, DateTimeKind.Local).AddTicks(2187));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 420, DateTimeKind.Local).AddTicks(1497));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "RoomImages",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 99, DateTimeKind.Local).AddTicks(1315),
+                defaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 546, DateTimeKind.Local).AddTicks(9048),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 568, DateTimeKind.Local).AddTicks(3901));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 430, DateTimeKind.Local).AddTicks(9497));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "Reservation",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 90, DateTimeKind.Local).AddTicks(7491),
+                defaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 536, DateTimeKind.Local).AddTicks(102),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 560, DateTimeKind.Local).AddTicks(1335));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 421, DateTimeKind.Local).AddTicks(7157));
 
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "CreateDate",
+            migrationBuilder.AddColumn<int>(
+                name: "HotelListId",
                 table: "Order",
-                type: "datetime2",
+                type: "int",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 102, DateTimeKind.Local).AddTicks(3200),
-                oldClrType: typeof(DateTime),
-                oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 571, DateTimeKind.Local).AddTicks(4822));
+                defaultValue: 0);
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "House",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 96, DateTimeKind.Local).AddTicks(1593),
+                defaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 543, DateTimeKind.Local).AddTicks(6599),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 565, DateTimeKind.Local).AddTicks(5908));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 427, DateTimeKind.Local).AddTicks(7073));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "HotelListImages",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 100, DateTimeKind.Local).AddTicks(290),
+                defaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 547, DateTimeKind.Local).AddTicks(9043),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 569, DateTimeKind.Local).AddTicks(2203));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 431, DateTimeKind.Local).AddTicks(7216));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "HotelList",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 86, DateTimeKind.Local).AddTicks(9846),
+                defaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 532, DateTimeKind.Local).AddTicks(5226),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 557, DateTimeKind.Local).AddTicks(6701));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 417, DateTimeKind.Local).AddTicks(5328));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "HotelDescription",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 101, DateTimeKind.Local).AddTicks(3961),
+                defaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 549, DateTimeKind.Local).AddTicks(3233),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 570, DateTimeKind.Local).AddTicks(5689));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 433, DateTimeKind.Local).AddTicks(1864));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "FamousCity",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 80, DateTimeKind.Local).AddTicks(2530),
+                defaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 524, DateTimeKind.Local).AddTicks(8205),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 552, DateTimeKind.Local).AddTicks(1291));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 408, DateTimeKind.Local).AddTicks(1122));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "Category",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 98, DateTimeKind.Local).AddTicks(2310),
+                defaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 545, DateTimeKind.Local).AddTicks(8261),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 567, DateTimeKind.Local).AddTicks(5350));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 430, DateTimeKind.Local).AddTicks(749));
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropColumn(
+                name: "HotelListId",
+                table: "Order");
+
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "Slider",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 559, DateTimeKind.Local).AddTicks(2187),
+                defaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 420, DateTimeKind.Local).AddTicks(1497),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 89, DateTimeKind.Local).AddTicks(3923));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 534, DateTimeKind.Local).AddTicks(5348));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "RoomImages",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 568, DateTimeKind.Local).AddTicks(3901),
+                defaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 430, DateTimeKind.Local).AddTicks(9497),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 99, DateTimeKind.Local).AddTicks(1315));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 546, DateTimeKind.Local).AddTicks(9048));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "Reservation",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 560, DateTimeKind.Local).AddTicks(1335),
+                defaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 421, DateTimeKind.Local).AddTicks(7157),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 90, DateTimeKind.Local).AddTicks(7491));
-
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "CreateDate",
-                table: "Order",
-                type: "datetime2",
-                nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 571, DateTimeKind.Local).AddTicks(4822),
-                oldClrType: typeof(DateTime),
-                oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 102, DateTimeKind.Local).AddTicks(3200));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 536, DateTimeKind.Local).AddTicks(102));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "House",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 565, DateTimeKind.Local).AddTicks(5908),
+                defaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 427, DateTimeKind.Local).AddTicks(7073),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 96, DateTimeKind.Local).AddTicks(1593));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 543, DateTimeKind.Local).AddTicks(6599));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "HotelListImages",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 569, DateTimeKind.Local).AddTicks(2203),
+                defaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 431, DateTimeKind.Local).AddTicks(7216),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 100, DateTimeKind.Local).AddTicks(290));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 547, DateTimeKind.Local).AddTicks(9043));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "HotelList",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 557, DateTimeKind.Local).AddTicks(6701),
+                defaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 417, DateTimeKind.Local).AddTicks(5328),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 86, DateTimeKind.Local).AddTicks(9846));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 532, DateTimeKind.Local).AddTicks(5226));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "HotelDescription",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 570, DateTimeKind.Local).AddTicks(5689),
+                defaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 433, DateTimeKind.Local).AddTicks(1864),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 101, DateTimeKind.Local).AddTicks(3961));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 549, DateTimeKind.Local).AddTicks(3233));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "FamousCity",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 552, DateTimeKind.Local).AddTicks(1291),
+                defaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 408, DateTimeKind.Local).AddTicks(1122),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 80, DateTimeKind.Local).AddTicks(2530));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 524, DateTimeKind.Local).AddTicks(8205));
 
             migrationBuilder.AlterColumn<DateTime>(
                 name: "CreateDate",
                 table: "Category",
                 type: "datetime2",
                 nullable: false,
-                defaultValue: new DateTime(2022, 6, 25, 17, 21, 35, 567, DateTimeKind.Local).AddTicks(5350),
+                defaultValue: new DateTime(2022, 6, 25, 18, 47, 34, 430, DateTimeKind.Local).AddTicks(749),
                 oldClrType: typeof(DateTime),
                 oldType: "datetime2",
-                oldDefaultValue: new DateTime(2022, 6, 25, 17, 23, 54, 98, DateTimeKind.Local).AddTicks(2310));
+                oldDefaultValue: new DateTime(2022, 6, 25, 18, 50, 2, 545, DateTimeKind.Local).AddTicks(8261));
         }
     }
 }
